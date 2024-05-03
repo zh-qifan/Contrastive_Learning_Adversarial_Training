@@ -7,7 +7,9 @@ evasion attack usually indicates a smoother neural network which is insensitive 
 changes on inputs. One approach to achieve this goal, named TRADES [Zhang et al., 2019], imposes
 a contrastive loss component in output space i.e.
 
-$$f \in \min_f \mathbb{E}_{(\mathbf{x}_0, y_0) \sim \mathcal{D}} \left\{\mathcal{L}(f(\mathbf{x}_0),y)+\beta\max_{d(\mathbf{x},\mathbf{x}_0)\leq \epsilon}\mathcal{L}(f(\mathbf{x}),f(\mathbf{x}_0))\right\}.$$
+```math
+f \in \min_f \mathbb{E}_{(\mathbf{x}_0, y_0) \sim \mathcal{D}} \left\{\mathcal{L}(f(\mathbf{x}_0),y)+\beta\max_{d(\mathbf{x},\mathbf{x}_0)\leq \epsilon}\mathcal{L}(f(\mathbf{x}),f(\mathbf{x}_0))\right\}.
+```
 
 Nevertheless, neural networks such as ResNet and Transformer tends to have diminishing rank on
 image datasets [Feng et al., 2022], which indicates that the deeper linear mappings are degenerated.
@@ -16,7 +18,10 @@ close in quotient space instead of in embedding space. Thus it is natural to ask
 contrastive loss can further improve adversarial robustness. The goal of this project is to test whether
 the following new loss function can improve adversarial robustness
 
-$$    f \in \min_f \mathbb{E}_{(\mathbf{x}_0, y_0) \sim \mathcal{D}} \left\{\max_{d(\mathbf{x},\mathbf{x}_0)\leq \epsilon}\mathcal{L}(f(\mathbf{x}),y)+\beta\max_{d(\mathbf{x},\mathbf{x}_0)\leq \epsilon}d_{\text{emb}}(g(\mathbf{x}),g(\mathbf{x}_0))\right\},$$
+```math
+f \in \min_f \mathbb{E}_{(\mathbf{x}_0, y_0) \sim \mathcal{D}} \left\{\max_{d(\mathbf{x},\mathbf{x}_0)\leq \epsilon}\mathcal{L}(f(\mathbf{x}),y)+\beta\max_{d(\mathbf{x},\mathbf{x}_0)\leq \epsilon}d_{\text{emb}}(g(\mathbf{x}),g(\mathbf{x}_0))\right\}
+```
+
 
 where $g$ is the mapping from inputs to its embedding. Further discussion on the proposed method
 can be found in Section 4. The base model in this project is the ResNet-18 [He et al., 2016]. The
