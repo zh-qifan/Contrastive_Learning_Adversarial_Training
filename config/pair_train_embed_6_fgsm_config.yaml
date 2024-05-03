@@ -1,0 +1,104 @@
+fit:
+    model:
+      class_path: LResnet
+      init_args:
+        name: pair_train_embed_6_fgsm
+        num_target_classes: 10
+        loss_module: 
+          class_path: torch.nn.CrossEntropyLoss
+        adv_train_method: 
+          class_path: FGSMAttack
+          init_args:
+            loss_module: 
+              class_path: torch.nn.CrossEntropyLoss
+            eps: 0.031
+            attack_type: untargeted
+        pair_training: True
+        embedding: 6
+        gamma: 1.5
+    data:
+      class_path: CIFAR10DataModule
+      init_args:
+        data_dir: ./data
+        batch_size: 128
+    optimizer:
+      class_path: torch.optim.AdamW
+      init_args:
+        lr: 0.00001
+        weight_decay: 0.1
+    trainer:
+      default_root_dir: models/cifar_checkpoints/pair_train_embed_6_fgsm
+      max_epochs: 100
+      devices: 1
+      logger: 
+        class_path: lightning.pytorch.loggers.TensorBoardLogger
+        init_args:
+          save_dir: lightning_logs
+          name: pair_train_embed_6_fgsm
+      callbacks:
+        - class_path: lightning.pytorch.callbacks.ModelCheckpoint
+          init_args: 
+            dirpath: models/cifar_checkpoints/pair_train_embed_6_fgsm
+            filename: pair_train_embed_6_fgsm-best
+            monitor: val_loss
+            save_top_k: 1
+            mode: min
+            save_weights_only: False
+            every_n_epochs: 1
+        - class_path: lightning.pytorch.callbacks.EarlyStopping
+          init_args:
+            monitor: val_loss
+            patience: 3
+            verbose: True
+            mode: min
+
+test:
+    model:
+      class_path: LResnet
+      init_args:
+        name: pair_train_embed_6_fgsm
+        num_target_classes: 10
+        loss_module: 
+          class_path: torch.nn.CrossEntropyLoss
+          init_args:
+            reduction: mean
+        adv_train_method: 
+          class_path: FGSMAttack
+          init_args:
+            loss_module: 
+              class_path: torch.nn.CrossEntropyLoss
+            eps: 0.031
+            attack_type: untargeted
+        pair_training: True
+        gamma: 0.01
+        adv_test_method:
+          class_path: FGSMAttack
+          init_args:
+            loss_module: 
+              class_path: torch.nn.CrossEntropyLoss
+            eps: 0.031
+            attack_type: untargeted
+    data:
+      class_path: CIFAR10DataModule
+      init_args:
+        data_dir: ./data
+        batch_size: 128
+    trainer:
+      default_root_dir: models/cifar_checkpoints/pair_train_embed_6_fgsm
+      max_epochs: 100
+      devices: 1
+      logger: 
+        class_path: lightning.pytorch.loggers.TensorBoardLogger
+        init_args:
+          save_dir: lightning_logs
+          name: pair_train_embed_6_fgsm
+      callbacks:
+        - class_path: lightning.pytorch.callbacks.ModelCheckpoint
+          init_args: 
+            dirpath: models/cifar_checkpoints/pair_train_embed_6_fgsm
+            monitor: val_loss
+            save_top_k: 1
+            mode: min
+            save_weights_only: False
+            every_n_epochs: 1
+    ckpt_path: /home/qz277/project/AMPs_refactored/pair_training/models/cifar_checkpoints/pair_train_embed_6_fgsm/pair_train_embed_6_fgsm-best.ckpt
