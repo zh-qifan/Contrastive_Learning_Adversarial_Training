@@ -22,9 +22,6 @@ from attack_method import *
 from data_modules import *
 from lightning.pytorch import seed_everything
 
-# Experiment Seed
-# 42
-# 123
 seed_everything(123, workers=True)
 
 if __name__ == "__main__":

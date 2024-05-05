@@ -1,4 +1,4 @@
-# Contrastive Learning in Embedding Space Improves Adversarial Robustness
+# Can Contrastive Learning in Embedding Space Improve Adversarial Robustness?
 
 ## About The Project
 
@@ -52,7 +52,7 @@ The datasets used in this project are [CIFAR-10](https://www.cs.toronto.edu/~kri
 
 ## Experiments
 
-One can directly run the following scripts to reproduce the experiment results. **After each experiment, it is suggested to remove the generated `model/` and `lightning_logs/` folder, or the models generated in the last experiment may be used in the next.** To run the experiment multiple times, you need to manually add argument `--seed_everything_default=<random seed>` at the end of each `python` command or change it in `main.py`.
+One can directly run the following scripts to reproduce the experiment results. **After each experiment, please save the generated `model/` and `lightning_logs/` folder as well as the `results.csv` file manually, since at the beginning of each experiments, these files will be removed.** To run the experiment multiple times, you need to manually add argument `--seed_everything_default=<random seed>` at the end of each `python` command or change it in `main.py`.
 
 ### Results on CIFAR-10
 
@@ -91,8 +91,8 @@ TBA
 * [X] Run and test adversarial training on CIFAR-10.
 * [X] Run and test [TRADES](https://github.com/yaodongyu/TRADES) on CIFAR-10.
 * [X] Run and test contrastive learning on CIFAR-10.
-* [ ] Ablation study on embedding space on CIFAR-10 (6 layers in total). 
-* [ ] Ablation study on tradeoff parameter on CIFAR-10 (0.1, 0.5, 1, 1.5, 2, 5). 
+* [X] Ablation study on embedding space on CIFAR-10 (6 layers in total). 
+* [X] Ablation study on tradeoff parameter on CIFAR-10 (0.1, 0.5, 1, 3, 6, 7). 
 * [ ] Run and test on MNIST.
 
 ## Contact

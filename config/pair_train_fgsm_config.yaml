@@ -14,7 +14,7 @@ fit:
             eps: 0.031
             attack_type: untargeted
         pair_training: True
-        gamma: 1.5
+        gamma: 6.0
     data:
       class_path: CIFAR10DataModule
       init_args:

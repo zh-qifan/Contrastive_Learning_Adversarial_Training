@@ -1,5 +1,4 @@
 fit:
-    seed_everything_default: 1234
     model:
       class_path: LResnet
       init_args:

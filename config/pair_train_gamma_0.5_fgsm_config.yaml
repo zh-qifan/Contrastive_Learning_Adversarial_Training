@@ -69,7 +69,7 @@ test:
             eps: 0.031
             attack_type: untargeted
         pair_training: True
-        gamma: 0.01
+        gamma: 0.5
         adv_test_method:
           class_path: FGSMAttack
           init_args:
