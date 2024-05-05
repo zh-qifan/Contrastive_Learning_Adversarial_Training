@@ -105,3 +105,12 @@ If you have any questions and suggestions for this project, please post an issue
 
 - CPSC 471/571 at Yale University is a wonderful introduction to the Trustworthy AI  and also offers me a totally different perspective to the AI research compared to my previous study. A big thanks to the Professor [Rex Ying](https://www.cs.yale.edu/homes/ying-rex/) and all the TAs. AI is not perfect in its explainability, robustness, fairness and efficiency and still needs time and researchers' efforts to help it improve and evolve to the AGI stage.
 - [Lightning](https://lightning.ai/docs/pytorch/stable/) is a beautiful tool in training deep learning models and it greatly saves my time in engineering. [LightningCLI](https://lightning.ai/docs/pytorch/stable/api_references.html#cli) provides a perfect CLI to execute my experiments from a shell terminal. This makes the whole project cleaner and more concise. Thank you, Lightning Team!
+
+## Reference
+
+- Hongyang Zhang, Yaodong Yu, Jiantao Jiao, Eric P. Xing, Laurent El Ghaoui, and Michael I. Jordan. Theoretically principled trade-off between robustness and accuracy. In International Conference on Machine Learning, 2019.
+- Ruili Feng, Kecheng Zheng, Yukun Huang, Deli Zhao, Michael Jordan, and Zheng-Jun Zha. Rank diminishing in deep neural networks, 2022.
+- Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 770–778, 2016.
+- Ian J Goodfellow, Jonathon Shlens, and Christian Szegedy. Explaining and harnessing adversarial examples. arXiv preprint arXiv:1412.6572, 2014.
+- Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and Adrian Vladu. Towards deep learning models resistant to adversarial attacks. In International Conference on Learning Representations, 2018. URL https://openreview.net/forum?id=rJzIBfZAb.
+- Seyed-Mohsen Moosavi-Dezfooli, Alhussein Fawzi, and Pascal Frossard. Deepfool: a simple and accurate method to fool deep neural networks. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 2574–2582, 2016.
