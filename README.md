@@ -104,7 +104,7 @@ If you have any questions and suggestions for this project, please post an issue
 
 ## Acknowledgement
 
-- CPSC 471/571 at Yale University is a wonderful introduction to the Trustworthy AI  and also offers me a totally different perspective to the AI research compared to my previous study. A big thanks to the Professor [Rex Ying](https://www.cs.yale.edu/homes/ying-rex/) and all the TAs. AI is not perfect in its explainability, robustness, fairness and efficiency and still needs time and researchers' efforts to help it improve and evolve to the AGI stage.
+- CPSC 471/571 at Yale University is a wonderful introduction to the Trustworthy AI  and also offers me a totally different perspective to the AI research compared to my previous study. A big thanks to Professor [Rex Ying](https://www.cs.yale.edu/homes/ying-rex/) and all the TAs. AI is not perfect in its explainability, robustness, fairness and efficiency and still needs time and researchers' efforts to help it improve and evolve to the AGI stage.
 - [Lightning](https://lightning.ai/docs/pytorch/stable/) is a beautiful tool in training deep learning models and it greatly saves my time in engineering. [LightningCLI](https://lightning.ai/docs/pytorch/stable/api_references.html#cli) provides a perfect CLI to execute my experiments from a shell terminal. This makes the whole project cleaner and more concise. Thank you, Lightning Team!
 
 ## Reference
