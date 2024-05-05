@@ -1,5 +1,7 @@
 # Can Contrastive Learning in Embedding Space Improve Adversarial Robustness?
 
+If you find this project interesting, please star the project. Thank you!
+
 ## About The Project
 
 This is a coursework project for CPSC 471/571 Trustworthy Deep Learning at Yale University, taught by Professor [Rex Ying](https://www.cs.yale.edu/homes/ying-rex/). The problem that this project investigates is whether a contrastive loss component in embedding space can improve adversarial robustness of deep learning models. Given the time constraint on this project, Weonly evaluate the loss component on image classification tasks. Robustness against
@@ -36,7 +38,6 @@ training, adversarial training (Madry et al., 2018) and TRADES (Zhang et al., 20
 - torch (2.2.2)
 - torchvision (0.17.2)
 - lightning (2.2.2)
-- CUDA
 
 The `environment.yml` is also provided. One can run 
 
@@ -80,7 +81,7 @@ sh scripts/ablation_gamma_cifar_10.sh
 
 ## Results
 
-TBA
+Please see the [project report](https://github.com/zh-qifan/Contrastive_Learning_Adversarial_Training/blob/main/CPSC_571_Project_Report.pdf).
 
 ## Roadmap
 
@@ -93,7 +94,7 @@ TBA
 * [X] Run and test contrastive learning on CIFAR-10.
 * [X] Ablation study on embedding space on CIFAR-10 (6 layers in total). 
 * [X] Ablation study on tradeoff parameter on CIFAR-10 (0.1, 0.5, 1, 3, 6, 7). 
-* [ ] Run and test on MNIST.
+* [X] Run and test on MNIST.
 
 ## Contact
 
